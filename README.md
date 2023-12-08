@@ -15,7 +15,7 @@ Tested in Windows Excel 2013 and Excel for Mac 2011, but should apply to 2007+.
 
 # Examples
 
-```vb
+```vba
 Dim Json As Object
 Set Json = JsonConverter.ParseJson("{""a"":123,""b"":[1,2,3,4],""c"":{""d"":456}}")
 
@@ -43,7 +43,7 @@ Debug.Print JsonConverter.ConvertToJson(Json, Whitespace:=2)
 '     }"
 ```
 
-```vb
+```vba
 ' Advanced example: Read .json file and load into sheet (Windows-only)
 ' (add reference to Microsoft Scripting Runtime)
 ' {"values":[{"a":1,"b":2,"c": 3},...]}
@@ -91,7 +91,7 @@ VBA-JSON includes a few options for customizing parsing/conversion if needed:
 - __AllowUnquotedKeys__ (Default = `False`) The JSON standard requires object keys to be quoted (`"` or `'`), use this option to allow unquoted keys.
 - __EscapeSolidus__ (Default = `False`) The solidus (`/`) is not required to be escaped, use this option to escape them as `\/` in `ConvertToJson`.
 
-```VB.net
+```vba
 JsonConverter.JsonOptions.EscapeSolidus = True
 ```
 
